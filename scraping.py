@@ -97,8 +97,25 @@ def mars_facts():
     # Convert dataframe into HTML format, add bootstrap
     return df.to_html(classes="table table-striped")
 
-if __name__ == "__main__":
 
-    # If running as script, print scraped data
+def mars_hems(browser):
+    url = 'https://marshemispheres.com/'
+    browser.visit(url)
+    
+    for x in range(4):
+        hemisphere_image_urls = []
+        browser.links.find_by_partial_text('Hemisphere')[x].click()
+        html = browser.html
+        page_soup = soup(html, 'html.parser')
+        title = page_soup.find('h2', class_='title').text
+        img_url = page_soup.find('li').a.get('href')
+        hemispheres = {}
+        hemispheres['img_url'] = f'https://marshemispheres.com/{img_url}'
+        hemispheres['title'] = title
+        hemisphere_image_urls.append(hemispheres)
+        browser.back()
+    return hemisphere_image_urls
+
+if __name__ == "__main__":
     print(scrape_all())
 
