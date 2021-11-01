@@ -12,6 +12,7 @@ def scrape_all():
     browser = Browser('chrome', **executable_path, headless=True)
 
     news_title, news_paragraph = mars_news(browser)
+    hem_info = mars_hems(browser)
 
     # Run all scraping functions and store results in a dictionary
     data = {
@@ -19,9 +20,10 @@ def scrape_all():
         "news_paragraph": news_paragraph,
         "featured_image": featured_image(browser),
         "facts": mars_facts(),
-        "last_modified": dt.datetime.now()
-    }
-
+        "last_modified": dt.datetime.now(),
+        "hemispheres": hem_info,
+        "last_updated" : dt.datetime.now()
+        }
     # Stop webdriver and return data
     browser.quit()
     return data
@@ -101,9 +103,10 @@ def mars_facts():
 def mars_hems(browser):
     url = 'https://marshemispheres.com/'
     browser.visit(url)
+
+    hemisphere_image_urls = []
     
     for x in range(4):
-        hemisphere_image_urls = []
         browser.links.find_by_partial_text('Hemisphere')[x].click()
         html = browser.html
         page_soup = soup(html, 'html.parser')
