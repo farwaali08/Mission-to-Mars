@@ -35,6 +35,10 @@
 
 [index.html](https://github.com/farwaali08/Mission-to-Mars/blob/9787e7507a7cd735c830592d75052459c3059351/Templates/index.html)
 
+### Mongo
+
+[Updated Mongo DB](https://github.com/farwaali08/Mission-to-Mars/blob/0d1af046805d225b3793f1984f6bb53c3f030dc6/Resources/mongo.png)
+
 ## WEBPAGE
 
 ![alt_text](https://github.com/farwaali08/Mission-to-Mars/blob/3a0d49a61fb67fd015aadfa54087f12264b7a3ae/Resources/web_page.png)
