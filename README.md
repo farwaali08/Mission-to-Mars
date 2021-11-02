@@ -2,6 +2,10 @@
 
 ## OVERVIEW
 
+For this project, a Python script, [scraping.py](https://github.com/farwaali08/Mission-to-Mars/blob/9787e7507a7cd735c830592d75052459c3059351/scraping.py) was created to scrape data from various websites containing Mars-related content. A Flask web application,[app.py](https://github.com/farwaali08/Mission-to-Mars/blob/9787e7507a7cd735c830592d75052459c3059351/app.py) was created to display all the scraped content on a single webpage.
+
+All resources are listed below, including pictures of the final formatted webpage, as well as a view from a mobile device.
+
 ## TOOLS, RESOURCES, & QUICK LINKS
 
 ### Software
