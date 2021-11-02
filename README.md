@@ -12,11 +12,8 @@
   * Libraries: Pandas, Splinter, BeautifulSoup, Flask, ChromeDriverManager, PyMongo
 
 * Jupyter Notebook 6.3.0
-
 * MongoDB
-
 * HTML5
-
 * Bootstrap 3
 
 ### Websites
