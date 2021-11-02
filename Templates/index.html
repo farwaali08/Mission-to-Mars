@@ -27,7 +27,7 @@
         <div class="col-md-12">
           <div class="media">
             <div class="media-body">
-              <h2 style= "color: bisque">Latest Mars News</h2>
+              <h3 style= "color: bisque">Latest Mars News</h3>
               <h4 style= "color:rgb(194, 121, 116)" class="media-heading">{{ mars.news_title }}</h4>
               <p style= "color:blanchedalmond">{{ mars.news_paragraph }}</p>
             </div>
@@ -50,9 +50,9 @@
 
         <div class="col-md-4">
           <!-- Mars Facts -->
-          <div class="row" id="mars-facts">
-            <h3 style= "color:bisque">Mars Facts</h3>
-            {{ mars.facts | safe }}
+            <div class="row" style= "color:rgb(112, 43, 49); background-color:rgb(179, 132, 121);" id="mars-facts">
+            <h3 style= "color:bisque" class="text-center">Mars Facts</h3>
+            <table class="table" style= "text-align: center;">{{ mars.facts | safe }}</table>
           </div>
         </div>
       </div>
